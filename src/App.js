@@ -3,16 +3,31 @@ import Fighter from "./components/Fighter.js"
 import FighterScreen from "./components/FighterScreen.js"
 import {useState} from 'react';
 
+const characters = [
+  {name: "Roy", color: "red"},
+  {name: "Fox", color: "yellow"},
+  {name: "Ganondorf", color: "green"},
+  {name: "Kazuya", color: "black"},
+  {name:"Sheik", color: "gray"},
+  {name:"Ness", color: "orange"}
+]
+
 function App() {
   const [visible, setVisible] = useState(false)
   return (
     <div className="App">
       <h1>Fighters</h1>
       <div className = "fighters-grid" >
-      <Fighter name={"Roy"} color={'red'} setVisible={setVisible} />
-      <Fighter name={"Fox"} color={'yellow'} setVisible={setVisible} />
-      <Fighter name={"Ganondorf"} color={'green'} setVisible={setVisible} />
-      <Fighter name={"Sheik"} color={'purple'} setVisible={setVisible} />
+      {
+        characters.map((element,i)=>{
+          return(
+          <Fighter name={element.name} color={element.color} setVisible={setVisible} />
+          )
+        })
+      }
+      
+
+
       </div>
       <FighterScreen isVisible={visible} setVisible={setVisible}/>
     </div>

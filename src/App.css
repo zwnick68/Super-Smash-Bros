@@ -19,6 +19,7 @@ width: 200px;
 background-color: red;
 transition: transform 0.3s;
 text-align: center;
+/* font-style: sans-serif white; */
 background-size: cover ;
 border: 5px solid transparent;
 background-repeat: no-repeat; 
