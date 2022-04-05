@@ -14,13 +14,25 @@
   min-height: 500px;
 }
 .Fighter {
-height: 100px;
-width: 100px;
+height: 200px;
+width: 200px;
 background-color: red;
 text-align: center;
+background-size: cover ;
+border: 5px solid transparent;
+/* background-repeat: no-repeat; */
 }
 
 .Fighter:hover{
   transform:scale(1.1);
+  cursor: pointer;
+  border: 5px white;
 
+}
+.fighter-screen {
+  background-color: #fff;
+  border: 1px solid black;
+  width: 50;
+  position: fixed; 
+  bottom: 0;
 }
