@@ -14,6 +14,8 @@ const characters = [
 
 function App() {
   const [visible, setVisible] = useState(false)
+  const [selectedCharacter,setSelectedCharacter] =useState(characters[0])
+
   return (
     <div className="App">
       <h1>Fighters</h1>
@@ -21,7 +23,7 @@ function App() {
       {
         characters.map((element,i)=>{
           return(
-          <Fighter name={element.name} color={element.color} setVisible={setVisible} />
+          <Fighter name={element.name} color={element.color} setVisible={setVisible} setSelectedCharacter={setSelectedCharacter} />
           )
         })
       }
@@ -29,7 +31,7 @@ function App() {
 
 
       </div>
-      <FighterScreen isVisible={visible} setVisible={setVisible}/>
+      <FighterScreen isVisible={visible} setVisible={setVisible} selectedCharacter={selectedCharacter}/>
     </div>
   );
 }

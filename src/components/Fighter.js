@@ -1,7 +1,11 @@
 
-export default ({name, color, setVisible}) => {
+export default ({name, color, setVisible, setSelectedCharacter}) => {
     return (
-    <div onClick={()=>{setVisible(true)}} 
+    <div 
+    onClick={()=>{
+        setSelectedCharacter({name: name, color: color})
+        setVisible(true)
+    }} 
     className ="Fighter" 
     style={{backgroundColor: color, 
     backgroundImage: `url(https://www.smashbros.com/assets_v2/img/fighter/${name.toLowerCase()}/main.png)`
