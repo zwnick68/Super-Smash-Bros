@@ -7,11 +7,13 @@
 }
 .fighters-grid{
   display: flex;
+  flex-wrap: wrap;
   background-color: #ccc;
   border: 1 px solid #858585;
   border-radius: 5px;
   width: min-content;
-  min-height: 500px;
+  min-width: 840px;
+  min-height: min-content;
 }
 .Fighter {
 height: 200px;
@@ -37,4 +39,5 @@ background-repeat: no-repeat;
   width: 50;
   position: fixed; 
   bottom: 0;
+  text-align: center;
 }
