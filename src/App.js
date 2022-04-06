@@ -4,6 +4,7 @@ import FighterScreen from "./components/FighterScreen.js"
 import {useState} from 'react';
 import SideNavigation from "./components/SideNavigation.js"
 
+
 const characters = [
   {name: "Roy", color: "red"},
   {name: "Fox", color: "yellow"},
@@ -20,6 +21,7 @@ const characters = [
 function App() {
   const [visible, setVisible] = useState(false)
   const [selectedCharacter,setSelectedCharacter] =useState(characters[0])
+  
 
   return (
     <div className="App">
@@ -28,7 +30,7 @@ function App() {
       {
         characters.map((element,i)=>{
           return(
-          <Fighter name={element.name} color={element.color} setVisible={setVisible} setSelectedCharacter={setSelectedCharacter} />
+          <Fighter name={element.name} color={element.color} setVisible={setVisible} setSelectedCharacter={setSelectedCharacter}  />
           )
         })
       }
@@ -36,6 +38,7 @@ function App() {
 
 
       </div>
+      
       <FighterScreen isVisible={visible} setVisible={setVisible} selectedCharacter={selectedCharacter}/>
       <SideNavigation isVisible={visible} characters={characters}/>
     </div>
