@@ -43,10 +43,18 @@ background-repeat: no-repeat;
   /* text-align: center; */
 }
 .name-bg{
-
+font-size: 65em;
+position: absolute;
+z-index:-2;
+top: -20%;
+left: 0%;
+color: gray;
+font-family: 'Bebas Neue', cursive;
 }
 .name-fg{
   font-size: 25em;
+  font-family: 'Bebas Neue', cursive;
+  left:0%
 }
 .char-portrait{
   position:absolute;
