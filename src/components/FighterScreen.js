@@ -3,9 +3,10 @@ const FighterScreen = ({isVisible, setVisible,selectedCharacter}) => {
 <div onClick={()=>{setVisible(false)}} 
 className="fighter-screen" style= {{
     display: isVisible ? "block" : "none"}}>
-        <h3>{selectedCharacter.name}</h3>
-        <img src={`https://www.smashbros.com/assets_v2/img/fighter/${selectedCharacter.name.toLowerCase()}/main.png`} width="100" height ="100"/>
-        <p>this character ass</p>
+        <span className="name-bg">{selectedCharacter.name}</span>
+        <h2 className="name-fg">{selectedCharacter.name}</h2>
+        <img className="char-portrait" src={`https://www.smashbros.com/assets_v2/img/fighter/${selectedCharacter.name.toLowerCase()}/main.png`} width="100" height ="100"/>
+        <p className="fighter-desc">this character ass</p>
       </div>
     )
 }

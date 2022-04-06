@@ -11,6 +11,7 @@ const characters = [
   {name:"Sheik", color: "gray"},
   {name:"Ness", color: "orange"},
   {name:"Cloud", color: "lightskyblue"},
+  {name:"Link", color: "brown"}
   
 
 ]
